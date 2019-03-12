@@ -16,6 +16,12 @@ class TestChatel(unittest.TestCase):
 
     def setUp(self):
         """Set up test fixtures, if any."""
+        self.greet_message = "Hey Y'all, I see you're using chatel!"
+
+    def test_print_greetings(self):
+        """Set up test to print the greeting. """
+        output = chatel.greeting()
+        assert(output == self.greet_message)
 
     def tearDown(self):
         """Tear down test fixtures, if any."""
